@@ -82,7 +82,7 @@ fn gen_module_prop(data: &CargoConfig) -> Result<()> {
     writeln!(file, "author={author}, Dog_EZ(Lazy)")?;
     writeln!(file, "fas_rs_author={author}")?;
     writeln!(file, "fas_rs_mod_author=Dog_EZ(Lazy)")?;
-    writeln!(file, "scene_author=dudu")?;
+    writeln!(file, "scene_author=嘟嘟ski")?;
     writeln!(file, "description={}", package.description)?;
     writeln!(file, "debug=0")?;
     writeln!(file, "disable_log=0")?;

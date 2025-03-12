@@ -1,5 +1,5 @@
 #!/system/bin/sh
-# Copyright 2023-2025, shadow3aaa
+# Copyright 2023-2025, shadow3 (@shadow3aaa)
 #
 # This file is part of fas-rs.
 #
@@ -17,24 +17,24 @@
 # with fas-rs. If not, see <https://www.gnu.org/licenses/>.
 
 propPath=$1
-version=$(cat $propPath | grep "version=" | cut -d "=" -f2)
-versionCode=$(cat $propPath | grep "versionCode=" | cut -d "=" -f2)
+version=$(cat $propPath | grep "^version=" | cut -d "=" -f2)
+versionCode=$(cat $propPath | grep "^versionCode=" | cut -d "=" -f2)
 
 json=$(
 	cat <<EOF
 {
     "name": "fas-rs",
-    "author": "shadow3",
+    "author": "shadow3, Dog_EZ",
     "version": "$version",
     "versionCode": ${versionCode},
     "features": {
         "strict": true,
-        "pedestal": true
+        "pedestal": false
     },
     "module": "fas_rs",
-    "state": "/dev/fas_rs/mode",
-    "entry": "/data/powercfg.sh",
-    "projectUrl": "https://github.com/shadow3aaa/fas-rs"
+    "state": "/data/adb/fas-rs/mode",
+    "entry": "/data/fas_rs_mod.sh",
+    "projectUrl": "https://github.com/DdogezD/fas-rs-mod"
 }
 EOF
 )

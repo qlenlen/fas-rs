@@ -1,5 +1,5 @@
 #!/system/bin/sh
-# Copyright 2023-2025, shadow3aaa
+# Copyright 2023-2025, shadow3 (@shadow3aaa)
 #
 # This file is part of fas-rs.
 #
@@ -16,7 +16,7 @@
 # You should have received a copy of the GNU General Public License along
 # with fas-rs. If not, see <https://www.gnu.org/licenses/>.
 
-DIR=/sdcard/Android/fas-rs
+DIR=/data/adb/fas-rs
 
 {
 	until [ -d $DIR ] && [ -d /data ]; do
@@ -24,6 +24,5 @@ DIR=/sdcard/Android/fas-rs
 	done
 
 	rm -rf $DIR
-	rm -f /data/powercfg.json
-	rm -f /data/powercfg.sh
+	rm -f /data/fas_rs_mod*
 } & # do not block boot

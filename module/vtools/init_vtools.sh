@@ -1,5 +1,5 @@
 #!/system/bin/sh
-# Copyright 2023-2025, shadow3aaa
+# Copyright 2023-2025, shadow3 (@shadow3aaa)
 #
 # This file is part of fas-rs.
 #
@@ -19,7 +19,7 @@
 BASEDIR="$(dirname $(readlink -f "$0"))"
 
 source $BASEDIR/gen_json.sh $1
-echo "$json" >/data/powercfg.json
+echo "$json" >/data/fas_rs_mod.json
 
-cp -af $BASEDIR/powercfg.sh /data/powercfg.sh
-chmod 755 /data/powercfg.sh
+cp -af $BASEDIR/powercfg.sh /data/fas_rs_mod.sh
+chmod 755 /data/fas_rs_mod.sh

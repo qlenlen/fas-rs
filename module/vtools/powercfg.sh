@@ -1,5 +1,5 @@
 #!/system/bin/sh
-# Copyright 2023-2025, shadow3aaa
+# Copyright 2023-2025, shadow3 (@shadow3aaa)
 #
 # This file is part of fas-rs.
 #
@@ -16,10 +16,10 @@
 # You should have received a copy of the GNU General Public License along
 # with fas-rs. If not, see <https://www.gnu.org/licenses/>.
 
-mode=/dev/fas_rs/mode
+mode=/data/adb/fas-rs/mode
 
 case "$1" in
-"init" | "fast" | "pedestal") echo fast >$mode ;;
+"init" | "fast" ) echo fast >$mode ;;
 "powersave" | "standby") echo powersave >$mode ;;
 "balance") echo balance >$mode ;;
 "performance") echo performance >$mode ;;

@@ -62,6 +62,8 @@ jobs:
         run: |
           mkdir -p output/artifact/release
           unzip "output/fas-rs(release).zip" -d output/artifact/release
+          cd output/artifact/release
+          zip -r9 fas-rs-mod.zip *
 
       - name: Upload release
         uses: ncipollo/release-action@v1.14.0
@@ -70,4 +72,18 @@ jobs:
           removeArtifacts: true
           name: fas-rs(release)
           tag: "Run-${{ github.run_number }}"
-          artifacts: output/artifact/release
+          artifacts: output/artifact/release/fas-rs-mod.zip
+          body: |
+            Commit: ${{ github.sha }}
+            ### Note: 
+            - 定期同步fas-rs上游
+            - 只兼容arm64-v8a安卓设备（64位）
+            - 配置项与fas-rs-mod同步
+            - 模块内不再放置debug版的fas-rs二进制
+
+            ### Credit
+            - fas-rs来自`shadow3aaa`
+            - scene-patcher来自`Dog_EZ`
+
+            ### 本仓库的意义
+            解决`Dog_EZ`更新过慢的问题

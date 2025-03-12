@@ -15,10 +15,10 @@
 # You should have received a copy of the GNU General Public License along
 # with fas-rs. If not, see <https://www.gnu.org/licenses/>.
 
-name: ci-build
+name: release
+permissions:
+  contents: write
 on:
-  push:
-    branches: ["master"]
   workflow_dispatch:
 
 env:
@@ -63,9 +63,11 @@ jobs:
           mkdir -p output/artifact/release
           unzip "output/fas-rs(release).zip" -d output/artifact/release
 
-      - name: Upload release version
-        uses: actions/upload-artifact@v4
+      - name: Upload release
+        uses: ncipollo/release-action@v1.14.0
         with:
+          allowUpdates: true
+          removeArtifacts: true
           name: fas-rs(release)
-          compression-level: 9
-          path: output/artifact/release
+          tag: "Run-${{ github.run_number }}"
+          artifacts: output/artifact/release

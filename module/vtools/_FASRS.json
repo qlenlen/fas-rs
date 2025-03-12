@@ -1,0 +1,80 @@
+{
+  "friendly": "FAS-RS",
+  "modes": [
+    {
+      "mode": [
+        "powersave"
+      ],
+      "call": [
+        [
+          "@limiters",
+          "NONE"
+        ],
+        [
+          "/data/adb/fas-rs/mode",
+          "powersave"
+        ]
+      ]
+    },
+    {
+      "mode": [
+        "balance"
+      ],
+      "call": [
+        [
+          "@limiters",
+          "NONE"
+        ],
+        [
+          "/data/adb/fas-rs/mode",
+          "balance"
+        ]
+      ]
+    },
+    {
+      "mode": [
+        "performance"
+      ],
+      "call": [
+        [
+          "@limiters",
+          "NONE"
+        ],
+        [
+          "/data/adb/fas-rs/mode",
+          "performance"
+        ]
+      ]
+    },
+    {
+      "mode": [
+        "fast"
+      ],
+      "call": [
+        [
+          "@limiters",
+          "NONE"
+        ],
+        [
+          "/data/adb/fas-rs/mode",
+          "fast"
+        ]
+      ]
+    },
+    {
+      "mode": [
+        "*"
+      ],
+      "call": [
+        [
+          "@limiters",
+          "NONE"
+        ],
+        [
+          "/data/adb/fas-rs/mode",
+          "fast"
+        ]
+      ]
+    }
+  ]
+}

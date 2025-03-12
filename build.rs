@@ -74,12 +74,23 @@ fn gen_module_prop(data: &CargoConfig) -> Result<()> {
         .open("module/module.prop")?;
 
     writeln!(file, "id={id}")?;
-    writeln!(file, "name={}", package.name)?;
+    writeln!(file, "name={}", "fas-rs-mod")?;
     writeln!(file, "version=v{}", package.version)?;
     writeln!(file, "versionCode={version_code}")?;
-    writeln!(file, "author={author}")?;
+    writeln!(file, "mod_version=v1")?;
+    writeln!(file, "mod_versionCodeName=QMod")?;
+    writeln!(file, "author={author}, Dog_EZ(Lazy)")?;
+    writeln!(file, "fas_rs_author={author}")?;
+    writeln!(file, "fas_rs_mod_author=Dog_EZ(Lazy)")?;
+    writeln!(file, "scene_author=dudu")?;
     writeln!(file, "description={}", package.description)?;
-
+    writeln!(file, "debug=0")?;
+    writeln!(file, "disable_log=0")?;
+    writeln!(file, "mod_show_reuben_in_scene=0")?;
+    writeln!(file, "mod_fas_rs_ui_manager_support=0")?;
+    writeln!(file, "mod_fallback_standard_extensions_support=0")?;
+    writeln!(file, "mod_enforces_clear_extensions_when_reboot=0")?;
+    writeln!(file, "mod_integrated_extensions=0")?;
     Ok(())
 }
 

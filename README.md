@@ -42,7 +42,7 @@
 
 ## **自定义(配置)**
 
-- ### **配置路径: `/sdcard/Android/fas-rs/games.toml`**
+- ### **配置路径: `/data/adb/fas-rs/games.toml`**
 
 - ### **参数(`config`)说明:**
 

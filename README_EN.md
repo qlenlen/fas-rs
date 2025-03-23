@@ -44,7 +44,7 @@
 
 ## **Customization (Configuration)**
 
-- ### **Configuration Path: `/sdcard/Android/fas-rs/games.toml`**
+- ### **Configuration Path: `/data/adb/fas-rs/games.toml`**
 
 - ### **Parameter (`config`) Description:**
 

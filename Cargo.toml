@@ -35,7 +35,7 @@ thiserror = "2.0.12"
 log = "0.4.27"
 anyhow = { version = "1.0.97" }
 inotify = { version = "0.11.0", default-features = false }
-flexi_logger = "0.30.0"
+flexi_logger = "0.30.1"
 libc = "0.2.171"
 toml = "0.8.20"
 serde = { version = "1.0.219", features = ["derive"] }
@@ -44,7 +44,7 @@ quick-xml = { version = "0.37.4", features = ["serialize"] }
 mlua = { version = "0.10.3", features = ["luajit", "vendored", "error-send"] }
 frame-analyzer = "0.3.3"
 dumpsys-rs = { git = "https://github.com/shadow3aaa/dumpsys-rs" }
-mimalloc = "0.1.44"
+mimalloc = "0.1.45"
 num_cpus = "1.16.0"
 nix = { version = "0.29.0", features = ["sched"] }
 
